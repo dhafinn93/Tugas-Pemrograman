@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulir perpustakaan kota Madiun</title>
+    </head>
+    <body>
+        <h1>Formulir masuk perpustakaan </h1>
+        <form action="Formulir_Perpuskotamadiun.html" method="get">
+        <label for="nama">Nama Pengunjung: </label>
+            <input type="text" id="nama" name="nama_pengunjung" required />
+        <br />
+        <br />
+        <label>Jenis kelamin:</label><br />
+            <input type="radio" id="laki" name="jenis_kelamin" value="laki-laki" />
+            <label for="laki">laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan" />
+            <label for="perempuan">perempuan</label>
+        <br />  
+        <br />
+        <label for="judul">Judul Buku:</label><br />
+            <input type="text" id="judul" name="judul_buku" required><br />
+        <br />
+        <label for="kategori">Kategori Buku:</label><br />
+            <select name="kategori_buku" id="kategori">
+                <option value="Komik">Komik</option>
+                <option value="Pengetahuan Alam">Pengetahuan Alam</option>
+                <option value="Pemrograman Web">Pemrograman Web</option>
+                <option value="Sejarah Indonesia">Sejarah Indonesia</option>
+                <option value="Sejarah Manchester United">Sejarah Manchester United</option>
+            </select>
+        <br />
+        <br />
+        <label for="pinjam">Waktu Pinjam</label><br />
+            <input type="date" id="pinjam" name="waktu_pinjam">
+        <br />
+        <br />
+        <label for="pinjam">Komentar Anda:</label><br />
+            <textarea 
+            name="komentar" id="komentar" rows="5" cols="20" placeholder="Silahkan katakan sesuatu di sini!"
+            ></textarea>
+        <br />
+            <input type="submit" value="Mulai pinjam" />
+        </form>       
+    </body>
+</html>

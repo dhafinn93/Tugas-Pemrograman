@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulir Klinik Kesehatan </title>
+    </head>
+    <body>
+        <h1>Formulir Daftar Pasien</h1>
+        <p>Silahkan isi formulir dibawah ini untuk mendaftar sebagai pasien di klinik sehat</p>
+        <form action="Formulir_kliniksehat.html" method="get">
+        <label for="nama">Nama Pasien: </label><br />
+            <input type="text" id="nama" name="nama_pasien" required />
+        <br />
+        <br />
+        <label for="tanggal">Tanggal lahir: </label><br />
+            <input type="date" id="tanggal" name="tanggal_lahir" />
+        <br />
+        <br />
+        <label>Jenis kelamin:</label><br />
+            <input type="radio" id="laki" name="jenis_kelamin" value="laki-laki" />
+            <label for="laki">laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan" />
+            <label for="perempuan">perempuan</label>
+        <br />  
+        <br />
+        <label for="nomer">No.Handphone:</label>
+            <input type="number" id="nomer" name="no_handphone" placeholder="08xxx" />
+        <br />
+        <br />
+        <label>Metode Pembayaran:</label><br>
+            <input type="checkbox" id="bpjs" name="pakai_bpjs" value="ya">
+        <label for="bpjs">Menggunakan BPJS Kesehatan</label>
+            <input type="checkbox" id="umum" name="umum" value="ya">
+        <label for="umum">Pembayaran Umum</label>
+        <br />
+        <br />
+        <label for="poli">Layanan Kesehatan:</label><br />
+            <select id="poli" name="layanan_kesehatan">
+                <option value="anak">Poli Anak</option>
+                <option value="gigi">Poli Gigi</option>
+                <option value="umum">Poli Umum</option>
+                <option value="gizi">Poli Gizi</option>
+            </select>
+        <br />
+        <br />
+        <label for="gejala">Gejala :</label><br />
+            <textarea 
+            name="gejala" id="gejala" rows="5" cols="30" placeholder="Silahkan jelaskan gejala yang anda rasakan!"
+            ></textarea>
+        <br />
+            <input type="submit" value="Mulai Daftar" />
+        </form>       
+    </body>
+</html>

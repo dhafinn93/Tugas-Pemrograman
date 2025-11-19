@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar membuat Form</title>
+    </head>
+    <body>
+        <h1>Membuat formulir</h1>
+        <form action="formulir.html" method="get">
+        <label for="nama">Nama: </label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" required />
+        <br />
+        <br />
+        <label for="password">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Masukkan password" required />
+        <br />
+        <br />
+        <label>Jenis kelamin:</label>
+            <input type="radio" id="laki" name="jenis_kelamin" value="laki-laki" checked />
+            <label for="laki">laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan" />
+            <label for="perempuan">perempuan</label>
+        <br />  
+        <br />
+        <label>Hobi: </label>
+            <input type="checkbox" id="hobi_baca" name="hobi_baca" />
+            <label for="hobi_baca">Membaca Buku</label>
+
+            <input type="checkbox" id="hobi_nulis" name="hobi_nulis" checked />
+            <label for="hobi_nulis">Menulis</label>
+
+            <input type="checkbox" id="hobi_mancing" name="hobi_mancing" />
+            <label for="hobi_mancing">Memancing</label>
+        <br />
+        <br />
+        <label for="kota">Asal Kota:</label>
+        <select name="asal_kota" id="kota">
+            <option value="Kota Jakarta">Jakarta</option>
+            <option value="Kota Bandung">Bandung</option>
+            <option value="Kota Semarang" selected>Semarang</option>
+        </select>
+        <br />
+        <br />
+        <label for="komentar">Komentar Anda:</label><br />
+            <textarea 
+            name="komentar" id="komentar" rows="5" cols="20" placeholder="Silahkan katakan isi hati anda"
+            ></textarea>
+        <br />
+            <input type="submit" value="Mulai proses" />
+        </form>       
+    </body>
+</html>
