@@ -5,21 +5,27 @@
     <style>
         body {
             font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
-            
+            position: fixed;
             margin: 0;
+            top: 0;
+            left: 0;
             
         }
+
         .header{
             background-color:  #1b1b53;
             display: flex;
             
         }
+        
         .header h2{
-            margin: 10px;
+            margin: 5px;
             padding: 10px;
+            width: 100px;
             background-color: #1a1a3e;
             border-style: solid;
             border-color: red;
+            text-align: center;
             font-size: medium;
             color: white;
         }
@@ -30,16 +36,18 @@
             display: block;
             object-fit: cover;
         }
+
         .section{
             background-color: #1a1a3e;
             text-align: left;
-            color: aliceblue;
+            color: white;
             float: left;
-            height: 60vh;
+            height: 45vh;
             width: 300px;
             padding: 10px 20px;
              
         }
+
         .nav{
             display: flex;
             justify-content: center;
@@ -58,6 +66,7 @@
             font-size: medium;
             text-align: center;
         }
+
         .article{
             display: flex;
             text-align: justify;
@@ -65,12 +74,15 @@
             font-size: large;
             padding: 20px 100px;
         }
+        
         footer{
             background-color: #1b1b53;
             color: white;
             text-align: center;
-            padding: 5px;
-            margin-top: auto;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -82,7 +94,7 @@
     </div>
     <img src="komik.png" >
     <div class="section">
-        <p>INI ADALAH AKU</p>
+        <p>INI ADALAH AKU</p><br>
         <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis ipsum veritatis saepe et fuga in, doloremque iste fugit dolorem! Consectetur a fugiat eos asperiores, atque harum impedit suscipit magni odio.
         </p>
