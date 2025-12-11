@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Nilai Angka ke Nilai Huruf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 25vh;
+            box-sizing: border-box;  
+        }
+        button{
+             padding: 8px;
+             background-color: aquamarine;
+             border-style: solid;
+             border-width: 2px;
+        }
+        .hasil {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Konversi Nilai Angka ke Nilai Huruf</h2>
+    <hr>
+
+    <label for="nilai">Masukkan Nilai Angka (0–100): </label><br><br>
+    <input type="number" id="nilai" min="0" max="100"  placeholder="Masukkan nilai"> <br><br>
+    <button onclick="konversi()">Konversi</button>
+
+    <div id="hasil"></div>
+
+    <script>
+        function konversi() {
+            const nilai = parseInt(document.getElementById("nilai").value);
+            let huruf = "";
+
+            if (isNaN(nilai) || nilai < 0 || nilai > 100) {
+                huruf = "Masukkan nilai antara 0–100!";
+            } else if (nilai <= 40) {
+                huruf = "E";
+            } else if (nilai <= 55) {
+                huruf = "D";
+            } else if (nilai <= 60) {
+                huruf = "C";
+            } else if (nilai <= 65) {
+                huruf = "BC";
+            } else if (nilai <= 70) {
+                huruf = "B";
+            } else if (nilai <= 80) {
+                huruf = "AB";
+            } else {
+                huruf = "A";
+            }
+
+            document.getElementById("hasil").textContent = "Nilai Huruf: " + huruf;
+        }
+    </script>
+
+</body>
+</html>

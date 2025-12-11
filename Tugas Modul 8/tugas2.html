@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 10px; 
+            margin-bottom: 10px;
+        }
+        .btn-row button {
+            flex: 1;
+        }
+
+        .reset-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kalkulator</h2>
+
+        <input type="number" id="bil1" placeholder="BIL1">
+        <input type="number" id="bil2" placeholder="BIL2">
+        <input type="text" id="hasil" placeholder="Hasil">
+        <div class="btn-row">
+            <button onclick="hitung('+')">+</button>
+            <button onclick="hitung('-')">-</button>
+            <button onclick="hitung('*')">*</button>
+            <button onclick="hitung('/')">÷</button>
+        </div>
+
+        <button class="reset-btn" onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        function hitung(operator) {
+            let bil1 = parseFloat(document.getElementById('bil1').value);
+            let bil2 = parseFloat(document.getElementById('bil2').value);
+            let hasil;
+
+            if (isNaN(bil1) || isNaN(bil2)) {
+                alert('Masukkan angka di kedua field!');
+                return;
+            }
+
+            switch(operator) {
+                case '+': hasil = bil1 + bil2; break;
+                case '-': hasil = bil1 - bil2; break;
+                case '*': hasil = bil1 * bil2; break;
+                case '/':
+                    if (bil2 === 0) {
+                        alert('Tidak bisa dibagi 0!');
+                        return;
+                    }
+                    hasil = bil1 / bil2;
+                    break;
+            }
+
+            document.getElementById('hasil').value = hasil;
+        }
+
+        function reset() {
+            document.getElementById('bil1').value = '';
+            document.getElementById('bil2').value = '';
+            document.getElementById('hasil').value = '';
+        }
+    </script>
+</body>
+</html>
